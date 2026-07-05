@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RolePlay Trainer</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- Fondo oscuro -->
+<div class="overlay"></div>
+
+<!-- Aplicación -->
+<div id="app">
+
+<!-- ========================= -->
+<!-- ENCABEZADO -->
+<!-- ========================= -->
+
+<header class="header">
+
+<div class="logoArea">
+
+<img
+src="logo.png"
+id="logo"
+alt="Logo">
+
+<div>
+
+<h1>ROLEPLAY TRAINER</h1>
+
+<p>
+Entrenamiento para Agentes de Turismo
+</p>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ========================= -->
+<!-- PANTALLA DE INICIO -->
+<!-- ========================= -->
+
+<section
+id="welcomeScreen"
+class="screen active">
+
+<div class="card">
+
+<h2>
+
+Bienvenido
+
+</h2>
+
+<p class="subtitle">
+
+Simulador de cancelación de reservas.
+
+</p>
+
+<form id="agentForm">
+
+<div class="formGroup">
+
+<label>
+
+Nombre del asesor
+
+</label>
+
+<input
+id="advisorName"
+type="text"
+placeholder="Ingrese su nombre"
+required>
+
+</div>
+
+<div class="formGroup">
+
+<label>
+
+Empresa
+
+</label>
+
+<input
+id="company"
+type="text"
+placeholder="Empresa">
+
+</div>
+
+<div class="formGroup">
+
+<label>
+
+Cargo
+
+</label>
+
+<input
+id="position"
+type="text"
+placeholder="Cargo">
+
+</div>
+
+<div class="formGroup">
+
+<label>
+
+Correo electrónico
+
+</label>
+
+<input
+id="email"
+type="email"
+placeholder="correo@empresa.com">
+
+</div>
+
+<button
+id="startButton"
+type="submit">
+
+INICIAR SIMULACIÓN
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PANTALLA DEL ROLE PLAY -->
+<!-- ========================= -->
+
+<section
+id="simulationScreen"
+class="screen">
+
+<div class="simulationContainer">
+<!-- ========================================= -->
+<!-- PANEL IZQUIERDO -->
+<!-- ========================================= -->
+
+<aside class="leftPanel">
+
+<div class="panelCard">
+
+<h3>Información</h3>
+
+<p><strong>Asesor</strong></p>
+
+<p id="advisorLabel">-</p>
+
+<hr>
+
+<p><strong>Cliente</strong></p>
+
+<p>Carlos Pérez</p>
+
+<hr>
+
+<p><strong>Escenario</strong></p>
+
+<p>Cancelación de reserva</p>
+
+</div>
+
+<div class="panelCard">
+
+<h3>Tiempo</h3>
+
+<p id="timer">
+
+00:00
+
+</p>
+
+</div>
+
+</aside>
+
+<!-- ========================================= -->
+<!-- PANEL DERECHO -->
+<!-- ========================================= -->
+
+<section class="chatPanel">
+
+<div
+id="chatMessages"
+class="chatMessages">
+
+</div>
+
+<div
+id="answerButtons"
+class="answerButtons">
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- PANTALLA DE RESULTADOS -->
+<!-- ========================================= -->
+
+<section
+id="resultScreen"
+class="screen">
+
+<div class="card">
+
+<h2>
+
+Simulación finalizada
+
+</h2>
+
+<div class="resultItem">
+
+<strong>Asesor</strong>
+
+<span id="resultAdvisor"></span>
+
+</div>
+
+<div class="resultItem">
+
+<strong>Cliente</strong>
+
+<span>Carlos Pérez</span>
+
+</div>
+
+<div class="resultItem">
+
+<strong>Puntaje</strong>
+
+<span id="resultScore"></span>
+
+</div>
+
+<div class="resultItem">
+
+<strong>Tiempo</strong>
+
+<span id="resultTime"></span>
+
+</div>
+
+<div class="resultItem">
+
+<strong>Resultado</strong>
+
+<span id="resultStatus"></span>
+
+</div>
+
+<button
+id="restartButton">
+
+NUEVA SIMULACIÓN
+
+</button>
+
+</div>
+
+</section>
+</div>
+
+<!-- ========================= -->
+<!-- ARCHIVOS JAVASCRIPT -->
+<!-- ========================= -->
+
+<script src="data.js"></script>
+
+<script src="flow.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
